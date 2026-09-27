@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "products"
+    label: "Məhsullar Və Paketlər"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Məhsul Adı", name: "title", widget: "string" }
+      - { label: "Teq (Məs: 🔥 Ən Çox Satan)", name: "tag", widget: "string", default: "Sərfəli Qiymət" }
+      - { label: "Şəkil", name: "image", widget: "image" }
+      - { label: "Məhsul Açıqlaması", name: "description", widget: "text" }
+      - { label: "Qiymət/Düymə Mətni", name: "price_text", widget: "string", default: "Hesabla / Sifariş Et" }
